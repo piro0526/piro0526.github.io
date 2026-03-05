@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 48px 24px 36px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 8px;
+    }
+
+    header .affiliation {
+      font-size: 1.05rem;
+      color: #a8b3cf;
+      margin-bottom: 12px;
+    }
+
+    header .contact a {
+      color: #7eb8f7;
+      text-decoration: none;
+      font-size: 0.95rem;
+      margin: 0 8px;
+    }
+
+    header .contact a:hover {
+      text-decoration: underline;
+    }
+
+    nav {
+      background: #16213e;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+
+    nav a {
+      color: #c8d3e8;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-size: 0.9rem;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    nav a:hover {
+      background: #0f3460;
+      color: #fff;
+    }
+
+    main {
+      max-width: 860px;
+      margin: 40px auto;
+      padding: 0 20px 60px;
+    }
+
+    section {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+      padding: 32px 36px;
+      margin-bottom: 28px;
+    }
+
+    section h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      border-left: 4px solid #0f3460;
+      padding-left: 12px;
+      margin-bottom: 20px;
+    }
+
+    /* Lists */
+    ul.plain {
+      list-style: none;
+    }
+
+    ul.plain li {
+      padding: 6px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    ul.plain li:last-child {
+      border-bottom: none;
+    }
+
+    /* Timeline entries */
+    .entry {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .entry-date {
+      min-width: 120px;
+      font-size: 0.85rem;
+      color: #888;
+      padding-top: 3px;
+    }
+
+    .entry-body h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1a1a2e;
+      margin-bottom: 2px;
+    }
+
+    .entry-body p {
+      font-size: 0.92rem;
+      color: #555;
+    }
+
+    /* Publications */
+    ol.publications {
+      padding-left: 20px;
+    }
+
+    ol.publications li {
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    ol.publications li span.title {
+      font-weight: 600;
+    }
+
+    ol.publications li span.venue {
+      color: #555;
+      font-style: italic;
+    }
+
+    /* Awards */
+    .award-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 6px 0;
+      border-bottom: 1px solid #f0f0f0;
+      gap: 12px;
+    }
+
+    .award-item:last-child {
+      border-bottom: none;
+    }
+
+    .award-item .award-name {
+      font-size: 0.95rem;
+    }
+
+    .award-item .award-year {
+      font-size: 0.85rem;
+      color: #888;
+      white-space: nowrap;
+    }
+
+    /* Certifications */
+    .cert-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 6px 0;
+      border-bottom: 1px solid #f0f0f0;
+      gap: 12px;
+    }
+
+    .cert-item:last-child {
+      border-bottom: none;
+    }
+
+    .cert-item .cert-name {
+      font-size: 0.95rem;
+    }
+
+    .cert-item .cert-date {
+      font-size: 0.85rem;
+      color: #888;
+      white-space: nowrap;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.82rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header / Profile ===== -->
+  <header>
+    <h1>Your Name</h1>
+    <p class="affiliation">Master's Student · Department of Computer Science · University Name</p>
+    <div class="contact">
+      <a href="mailto:yourname@example.com">yourname@example.com</a>
+      <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </header>
+
+  <!-- ===== Navigation ===== -->
+  <nav>
+    <a href="#research">Research Topics</a>
+    <a href="#awards">Awards</a>
+    <a href="#publications">Publications</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#certifications">Licenses / Certifications</a>
+  </nav>
+
+  <main>
+
+    <!-- ===== Research Topics ===== -->
+    <section id="research">
+      <h2>Research Topics</h2>
+      <ul class="plain">
+        <li>Research topic 1 (e.g., Machine Learning)</li>
+        <li>Research topic 2 (e.g., Natural Language Processing)</li>
+        <li>Research topic 3 (e.g., Computer Vision)</li>
+      </ul>
+    </section>
+
+    <!-- ===== Awards ===== -->
+    <section id="awards">
+      <h2>Awards</h2>
+      <div class="award-item">
+        <span class="award-name">Award name (e.g., Best Paper Award, Conference Name)</span>
+        <span class="award-year">2025</span>
+      </div>
+      <div class="award-item">
+        <span class="award-name">Award name (e.g., Scholarship, Organization Name)</span>
+        <span class="award-year">2024</span>
+      </div>
+    </section>
+
+    <!-- ===== Publications ===== -->
+    <section id="publications">
+      <h2>Publications</h2>
+      <ol class="publications">
+        <li>
+          <span class="title">Paper title goes here.</span>
+          Your Name, Co-author Name.
+          <span class="venue">Proceedings of Conference Name (CONF 2025).</span>
+        </li>
+        <li>
+          <span class="title">Another paper title goes here.</span>
+          Your Name, Co-author Name.
+          <span class="venue">Journal of Something, Vol. 1, 2024.</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== Experience ===== -->
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <h3 style="font-size:1rem; color:#555; margin-bottom:14px; font-weight:600;">Internship</h3>
+
+      <div class="entry">
+        <div class="entry-date">Apr 2025 – Sep 2025</div>
+        <div class="entry-body">
+          <h3>Company Name</h3>
+          <p>Role / Team — Brief description of the work you did.</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">Aug 2024 – Sep 2024</div>
+        <div class="entry-body">
+          <h3>Company Name</h3>
+          <p>Role / Team — Brief description of the work you did.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Education ===== -->
+    <section id="education">
+      <h2>Education</h2>
+
+      <div class="entry">
+        <div class="entry-date">Apr 2024 – Present</div>
+        <div class="entry-body">
+          <h3>Master of Engineering in Computer Science</h3>
+          <p>University Name, Graduate School of Information Science</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">Apr 2020 – Mar 2024</div>
+        <div class="entry-body">
+          <h3>Bachelor of Engineering in Computer Science</h3>
+          <p>University Name, Faculty of Information Science</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Licenses / Certifications ===== -->
+    <section id="certifications">
+      <h2>Licenses / Certifications</h2>
+
+      <div class="cert-item">
+        <span class="cert-name">Certification name (e.g., Applied Information Technology Engineer Exam)</span>
+        <span class="cert-date">Jun 2023</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">Certification name (e.g., TOEIC 800)</span>
+        <span class="cert-date">Oct 2022</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
